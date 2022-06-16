@@ -9,7 +9,7 @@
 Bring this project to the Google Colab. Set the hardware accelerator to GPU in the runtime type of Google Colab. (Select **Runtime > Change runtime type > Hardware accelerator > GPU**)\
 Open the file named '2021-PNU-K2P1-Portrait rights protection system.ipynb' on the Google Colab. 
 
-1. Install libraries.
+0. Bring and install the necessary libraries.
 ```python
 !pip install requests
 !pip install Pillow
@@ -20,10 +20,10 @@ Open the file named '2021-PNU-K2P1-Portrait rights protection system.ipynb' on t
 !pip install insightface==0.2.1 onnxruntime moviepy
 !pip install streamlit
 !pip install pyngrok
+!pip install "opencv-python-headless<4.3"
 ```
 
-2. Restart the Google Colab runtime and then run the following code.
-Select Runtime > Restart runtime
+1. Restart the Google Colab runtime and then run the following code. (Select **Runtime > Restart runtime**) And allow drive mount permission.
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
@@ -33,10 +33,10 @@ drive.mount('/content/drive')
 
 4. Sign up [ngrok](https://ngrok.com/) and get your authtoken. Then write and execute your authtoken after '!ngrok'.
 ```python
-!ngrok your_authtoken
+!ngrok authtoken write_your_authtoken_here
 ```
 
-5. Execute the below codes.
+5. Execute the below codes. And click the link of 'p_url'.
 ```python
 from pyngrok import ngrok
 !streamlit run test.py&>/dev/null&
@@ -48,11 +48,13 @@ p_url
 ```python
 !ps
 !kill PID_steamlit
+!ps
 ```
 
-7. Also kill ngrok.
+7. Also kill ngrok and check it.
 ```python
 ngrok.kill()
+!ps
 ```
 
 
