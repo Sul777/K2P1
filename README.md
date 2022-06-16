@@ -6,8 +6,8 @@
 
 # How to use?
 
-구글 코랩으로 이 프로젝트 파일을 불러오세요.
-Open the file named '2021-PNU-K2P1-Portrait rights protection system.ipynb' on Google Colab. 
+Bring this project to the Google Colab. Set the hardware accelerator to GPU in the runtime type of Google Colab. (Select **Runtime > Change runtime type > Hardware accelerator > GPU**)\
+Open the file named '2021-PNU-K2P1-Portrait rights protection system.ipynb' on the Google Colab. 
 
 1. Install libraries.
 ```python
