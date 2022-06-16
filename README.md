@@ -29,14 +29,12 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-3. Run STREAMLIT code after the upper code.
-
-4. Sign up [ngrok](https://ngrok.com/) and get your authtoken. Then write and execute your authtoken after '!ngrok'.
+2. Sign up [ngrok](https://ngrok.com/) and get your authtoken. Then write and execute your authtoken after '!ngrok'.
 ```python
 !ngrok authtoken write_your_authtoken_here
 ```
 
-5. Execute the below codes. And click the link of 'p_url'.
+3. Execute the below codes. And click the link of 'p_url'.
 ```python
 from pyngrok import ngrok
 !streamlit run test.py&>/dev/null&
@@ -44,14 +42,14 @@ p_url = ngrok.connect(addr='8501')
 p_url
 ```
 
-6. After using the project, you have to kill steamlit and ngrok. In the list of '!ps', find the PID of streamlit and kill the PID.
+4. After using the project, you have to kill steamlit and ngrok. In the list of '!ps', find the PID of streamlit and kill the PID.
 ```python
 !ps
 !kill PID_steamlit
 !ps
 ```
 
-7. Also kill ngrok and check it.
+5. Also kill ngrok and check it.
 ```python
 ngrok.kill()
 !ps
